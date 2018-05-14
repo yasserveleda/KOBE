@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#films">Upcoming Movies</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#page-top">Top</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#films">Films</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#footer">Footer</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header id="page-top" class="bg-primary text-white" style="background: #021d25 !important;">
+      <div class="container text-center">
+        <img id="img_logo" ng-src="{{ home.img_logo }}">
+        <h1>Welcome to Upcoming Movies Desktop App</h1>
+        <p class="lead">This is a simple project using The Movie Database (TMDb)</p>
+      </div>
+    </header>
+
+    <section id="films">
+      <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Search..." ng-model="movieSearch">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6 card" ng-repeat="movie in home.movies | filter:movieSearch | orderBy : ['original_title', 'title'] ">
+                <img ng-src="{{ home.pathImage(movie) }}">
+                <p class="info">
+                    <span class="bold">Title:</span> {{ movie.original_title }}<br>
+                    <span class="bold">Genre:</span> {{ home.translateGenres(movie.genre_ids) }}<br>
+                    <span class="bold">Genre Name:</span> {{ home.translateGenres(movie.genre_ids)}}<br>
+                    <span class="bold">Release Date:</span> {{ movie.release_date }}
+                </p>
+                
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" ng-click="home.view(movie)">
+                    More
+                </button>
+            </div>
+
+            <div class="row row-navigation text-right">
+                <div class="col-md navigation">
+                    <button class="btn btn-info" ng-click="home.prevPage()"> Prev </button>
+                    <p> {{ home.pageCount }}</p>
+                    <button class="btn btn-info" ng-click="home.nextPage()"> Next </button>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">{{ home.movieModal.original_title }}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <img class="img-modal" ng-src="{{home.pathImgModal}}">
+                    <!--img ng-src="https://image.tmdb.org/t/p/w500/{{ home.movieModal.backdrop_path }}"-->
+                    <span class="bold">Genre:</span> {{ home.translateGenres(home.movieModal.genre_ids) }}<br>
+                    <span class="bold">overview:</span> {{ home.movieModal.overview }}<br>
+                    <span class="bold">Release Date:</span> {{ home.movieModal.release_date }}
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <!--button type="button" class="btn btn-primary">Save changes</button-->
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer id="footer" class="py-5 bg-dark" style="background: #021d25 !important">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Upcoming Movies Desktop App 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+  </body>
+
+</html>
