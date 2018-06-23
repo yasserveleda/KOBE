@@ -1,0 +1,67 @@
+#home-header {
+  text-align: center;
+}
+.container {
+	width: 100%;
+    max-width: none;
+    padding: 0px;
+}
+
+header > .container {
+	margin: 100px 0;
+}
+
+header > .container > img {
+	margin-bottom: 25px;
+}
+
+#films {
+	padding: 20px;
+}
+
+.card {
+	min-height: 150px;
+	border: none;
+	margin-top: 20px;
+}
+
+.card > img {
+	max-width: 400px;
+	min-height: 225px;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+p.info {
+	min-height: 150px;
+}
+
+@media screen and (max-width: 575px) {
+	.card > img {
+		max-width: 100%;
+	}
+}
+
+.img-modal {
+	width: 100%;
+}
+
+.row-navigation {
+	width: 100%;
+}
+
+.navigation {
+	padding: 25px;
+}
+
+.navigation > button,  .navigation > p {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+#img_logo {
+	height: 200px;
+}
+
