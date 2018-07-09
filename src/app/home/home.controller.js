@@ -14,7 +14,6 @@ class HomeController {
 		this.img_logo = img_logo;
 		this.getGenre();
 		this.getUpcoming();
-        this.testeStr = `Yasser Teste String`;
 	}
 
 	view(movie) {
