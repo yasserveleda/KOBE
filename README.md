@@ -24,6 +24,9 @@ $ npm install
 
 # inicializar o servidor
 $ npm start
+
+# executar os testes unitários
+$ npm run test
 ```
 
 abra o link [http://localhost:8080](http://localhost:8080) no seu navegador.
