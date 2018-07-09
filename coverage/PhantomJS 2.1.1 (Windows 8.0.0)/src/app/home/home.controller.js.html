@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src\app\home\home.controller.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">src/app/home/</a> home.controller.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">35.9% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>14/39</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">17.65% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>3/17</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">48.28% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>14/29</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import _ from 'lodash';
+import img from '../../public/img/thumb-fail.png';
+import img_logo from '../../public/img/tmdb-logo.svg';
+&nbsp;
+class HomeController {
+	constructor(HomeService) {
+		this.HomeService = HomeService;
+		this.movies = [];
+		this.genres = [];
+		this.movieModal;
+		this.pathImgModal = ``;
+		this.imgDefault = img;
+		this.pageCount = 1;
+		this.img_logo = img_logo;
+		this.getGenre();
+		this.getUpcoming();
+        this.testeStr = `Yasser Teste String`;
+	}
+&nbsp;
+	view(movie) <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >		this.movieModal = movie;</span>
+<span class="cstat-no" title="statement not covered" >		this.pathImgModal = `https://image.tmdb.org/t/p/w500/${movie.poster_path}`</span>
+	}
+&nbsp;
+    getUpcoming() {
+    	this.HomeService.getUpcoming().then( response =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >this.movies = response.data.results </span></span>).catch( error =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >console.log(error) </span></span>);
+    }
+&nbsp;
+    getGenre() {
+    	this.HomeService.getGenres().then( response =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >this.genres = response.data.genres </span></span>).catch( error =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >console.log(error) </span></span>);
+    }
+&nbsp;
+    nextPage() <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    	this.pageCount++;</span>
+<span class="cstat-no" title="statement not covered" >    	this.HomeService.getPage(this.pageCount).then( response =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >this.movies = response.data.results </span></span>).catch( error =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >console.log(error) </span></span>);</span>
+    }
+&nbsp;
+    prevPage() <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    	if(this.pageCount &gt; 1) {</span>
+<span class="cstat-no" title="statement not covered" >			this.pageCount--;</span>
+<span class="cstat-no" title="statement not covered" >	    	this.HomeService.getPage(this.pageCount).then( response =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >this.movies = response.data.results </span></span>).catch( error =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >console.log(error) </span></span>);</span>
+    
+    	}
+    }
+&nbsp;
+    translateGenres(list) <span class="fstat-no" title="function not covered" >{</span>
+    	let gen = <span class="cstat-no" title="statement not covered" >``;</span>
+<span class="cstat-no" title="statement not covered" >    	if(list){</span>
+<span class="cstat-no" title="statement not covered" >			for (var i = 0; i &lt; list.length; i++) {</span>
+	    		let genre = <span class="cstat-no" title="statement not covered" >_.find(this.genres, function(obj) <span class="fstat-no" title="function not covered" >{ <span class="cstat-no" title="statement not covered" >return obj.id == list[i] </span>})</span>;</span>
+<span class="cstat-no" title="statement not covered" >	    		gen = `${gen}, ${genre.name}`</span>
+	    	}
+    	}
+    	
+<span class="cstat-no" title="statement not covered" >    	return gen.slice(1);</span>
+    }
+&nbsp;
+    pathImage(movie) <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    	if( movie.backdrop_path ) <span class="cstat-no" title="statement not covered" >return `https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`; </span></span>
+<span class="cstat-no" title="statement not covered" >    	return this.imgDefault;</span>
+    }
+}
+&nbsp;
+HomeController.$inject = [`HomeService`];
+&nbsp;
+export default HomeController;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Jul 09 2018 11:01:22 GMT-0300 (Hora oficial do Brasil)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

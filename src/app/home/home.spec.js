@@ -1,4 +1,4 @@
-import app from './app/home';
+import app from './index';
 
 describe('app.home', () => {
 
@@ -13,8 +13,8 @@ describe('app.home', () => {
       });
     });
 
-    it('should contain the starter url', () => {
-      expect(ctrl.url).toBe('https://github.com/preboot/angular-webpack');
+    it('should contain the test string', () => {
+      expect(ctrl.testeStr).toBe('Yasser Teste String');
     });
   });
 });
