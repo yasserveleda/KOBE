@@ -1,6 +1,6 @@
-# ui-router-webpack
+# The Movie Database (TMDb) APP
 
-Um projeto (esqueleto) simples usando AngularJS, Webpack e UI-Router.
+Um projeto simples utilizando a api The Movie DB para listar os filmes com AngularJS.
 
 ## Links
 
@@ -23,10 +23,7 @@ $ cd meu-projeto
 $ npm install
 
 # inicializar o servidor
-$ npm start
-
-# executar os testes unitários
-$ npm run test
+$ npm run server
 ```
 
 abra o link [http://localhost:8080](http://localhost:8080) no seu navegador.
@@ -37,3 +34,27 @@ abra o link [http://localhost:8080](http://localhost:8080) no seu navegador.
 Voce precisara instalar ou devera ter instalado em sua maquina:
 * `node` [https://nodejs.org](https://nodejs.org)
 * `npm`  [https://www.npmjs.com](https://www.npmjs.com)
+
+## Testes
+
+Testes unitários:
+```bash
+# executar os testes unitários
+$ npm run test
+```
+
+## Build
+
+Gerar o build:
+```bash
+# executar o build
+$ npm run build
+```
+
+## Executando o App 
+
+```bash
+# executar o build
+$ npm start
+```
+abra o link [http://localhost:3000](http://localhost:3000) no seu navegador.
