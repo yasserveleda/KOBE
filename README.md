@@ -47,14 +47,14 @@ $ npm run test
 
 Gerar o build:
 ```bash
-# executar o build
+# gerar o build
 $ npm run build
 ```
 
 ## Executando o App 
 
 ```bash
-# executar o build
+# executar apos o build gerado
 $ npm start
 ```
 abra o link [http://localhost:3000](http://localhost:3000) no seu navegador.
